@@ -1,4 +1,5 @@
 /servers/
+.metadata/
 target/
 *.properties
 properties/
