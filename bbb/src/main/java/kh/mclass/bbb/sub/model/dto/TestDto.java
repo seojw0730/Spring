@@ -1,7 +1,5 @@
 package kh.mclass.bbb.sub.model.dto;
 
-import java.io.PrintWriter;
-
 import org.springframework.stereotype.Component;
 
 @Component("testDto")

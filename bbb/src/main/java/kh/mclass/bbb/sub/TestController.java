@@ -45,7 +45,7 @@ public class TestController {
 		System.out.println(asdf);
 		System.out.println(ccc);
 		ss.setAttribute("c", "세션");
-		request.setAttribute("serverTime", testService.method1());
+//		request.setAttribute("serverTime", testService.method1());
 //		try {
 //			response.sendRedirect("test");
 //		} catch (IOException e) {
