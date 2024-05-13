@@ -1,8 +1,8 @@
 /servers/
 .metadata/
 target/
-*.properties
-properties/
+#*.properties
+keyproperties/
 *.classpath
 pom.xml.tag
 pom.xml.releaseBackup
