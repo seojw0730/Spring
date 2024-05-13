@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 
 import org.springframework.stereotype.Component;
 
-//@Component("testDto")
+@Component("testDto")
 public class TestDto {
 	private String a1;
 	private String a2;

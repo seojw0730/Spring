@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +23,9 @@ public class TestController {
 	private TestService testService;
 	@Autowired
 	private TestDto testDto;
+	
+	@Value("testDto.a1")
+	private String ccc;
 	
 	//get post 막 쓰고 싶을 때 -> RequestMapping
 //	@RequestMapping(method = RequestMethod.GET, path = "/test")
@@ -39,6 +43,7 @@ public class TestController {
 			) {
 		System.out.println(testDto);
 		System.out.println(asdf);
+		System.out.println(ccc);
 		ss.setAttribute("c", "세션");
 		request.setAttribute("serverTime", testService.method1());
 //		try {
