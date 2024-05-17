@@ -66,4 +66,16 @@
 	스킵 
 	 -->
 	
+	<beans:bean class="kh.mclass.bbb.common.LoginInterceptor" id="loginInterceptor"/>
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<exclude-mapping path="/login"/>
+			<exclude-mapping path="/join"/>
+			<exclude-mapping path="/main"/>
+			<exclude-mapping path="/resources/**"/>
+			<beans:ref bean="loginInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
 </beans:beans>

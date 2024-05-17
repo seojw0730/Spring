@@ -1,8 +1,10 @@
 package kh.mclass.bbb.common;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,4 +68,15 @@ public class AdviceLog {
 		return returnObj;
 	}
 
+	//들어가기 전에 경비아저씨한테 신분증 맡김
+	@Before("controllerPointcut()")
+	public void bctrlLog(JoinPoint jp) {
+		logger.debug("▷["+jp.getThis()+":"+jp.getSignature().getName()+"]");
+		jp.getArgs();
+		Object[] args = jp.getArgs();
+		for (int i = 0; i < args.length; i++) {
+			logger.debug("▷▷▷-args[" + i + "]" + args[i] + "");
+		}
+	}
+	
 }

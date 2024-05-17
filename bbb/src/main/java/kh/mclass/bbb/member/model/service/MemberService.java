@@ -10,15 +10,24 @@ import kh.mclass.bbb.member.model.dao.MemberDao;
 import kh.mclass.bbb.member.model.dto.MemberRes;
 
 @Service("memberService")
+@Transactional
 public class MemberService {
 	@Autowired
 	private MemberDao memberDao;
 	
-	//@Transactional
+//	@Transactional
 	public List<MemberRes> selectList(){
 		memberDao.insert();
 		memberDao.update();
 		
 		return memberDao.selectList(); 
 	}
+	
+	public MemberRes selectOne(String memId){
+		memberDao.insert();
+		memberDao.update();
+		
+		return memberDao.selectOne(memId); 
+	}
+	
 }

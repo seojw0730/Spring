@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kh.mclass.bbb.sub.model.dto.TestDto;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class TestController {
@@ -30,7 +30,7 @@ public class TestController {
 	//get post 막 쓰고 싶을 때 -> RequestMapping
 //	@RequestMapping(method = RequestMethod.GET, path = "/test")
 	//귀찮아서 나온거
-	@GetMapping("/test")
+	@GetMapping(path = "/test")
 	public String method1(
 			@RequestParam(defaultValue = "aa", required = false, name = "a")
 			/* 
